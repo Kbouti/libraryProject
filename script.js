@@ -1,5 +1,13 @@
 let myLibrary = [];
 
+const booksDiv = document.getElementById("books");
+const newBookButton = document.getElementById("newBook");
+
+newBookButton.addEventListener("click", function(){
+    console.log("I shit me britges");
+});
+
+
 function Book (title, author, read){
     this.title = title;
     this.author = author;
@@ -9,6 +17,10 @@ function Book (title, author, read){
 function addBook(book){
     myLibrary.push(book)
 }
+
+// function publishContent(){
+//     booksDiv.innerHTML = "something else";
+// }
 
 let book1 = new Book(`The Bible`, `Jesus`, `no`);
 let book2 = new Book(`The Lord of the Rings`, `J.R.R. Tolkein`, `no`);
@@ -21,4 +33,5 @@ console.log(book1);
 console.log(myLibrary);
 
 addBook(book1);
+// publishContent();
 console.log(myLibrary);
