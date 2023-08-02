@@ -26,5 +26,6 @@ body {
     font-size:36px;
 }
 
-#addButton{
+form{
+    color:var(--yellow)
 }
