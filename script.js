@@ -16,6 +16,7 @@ newBookButton.addEventListener("click", function(){
 function Book (title, author, read){
     this.title = title;
     this.author = author;
+    this.pages = pages;
     this.read = read;
 }
 
@@ -23,9 +24,7 @@ function addBook(book){
     myLibrary.push(book)
 }
 
-function publishContent(){
-    booksDiv.innerHTML = "something else";
-}
+
 
 let book1 = new Book(`The Bible`, `Jesus`, `no`);
 let book2 = new Book(`The Lord of the Rings`, `J.R.R. Tolkein`, `no`);
@@ -38,5 +37,4 @@ console.log(book1);
 console.log(myLibrary);
 
 addBook(book1);
-// publishContent();
 console.log(myLibrary);
