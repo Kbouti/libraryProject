@@ -2,9 +2,14 @@ let myLibrary = [];
 
 const booksDiv = document.getElementById("books");
 const newBookButton = document.getElementById("newBook");
+const addBookForm = document.getElementById("addBook");
+
+
 
 newBookButton.addEventListener("click", function(){
     console.log("I shit me britges");
+    addBookForm.style.display = "block";
+    newBookButton.style.display = "none";
 });
 
 
@@ -18,9 +23,9 @@ function addBook(book){
     myLibrary.push(book)
 }
 
-// function publishContent(){
-//     booksDiv.innerHTML = "something else";
-// }
+function publishContent(){
+    booksDiv.innerHTML = "something else";
+}
 
 let book1 = new Book(`The Bible`, `Jesus`, `no`);
 let book2 = new Book(`The Lord of the Rings`, `J.R.R. Tolkein`, `no`);
