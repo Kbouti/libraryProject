@@ -1,32 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
-<body>
-    <div class="header">
-        <div id="title">Library</div>
-    </div>
-    <div class="content">
-        <button id="addButton">Add book</button>
-
-
-<form id="addBookForm">
-    <label for="bookTitle">Title</label>
-    <input type="text" id="bookTitle" name="title" placeholder="Book title">
-    <label for="author">Author</label>
-    <input type="text" id="author" name="author" placeholder="famous writerperson">
-    <label for="read">Have you read it?</label>
-    <button type="reset">Reset</button>
-    <button type="submit">Submit</button>
-  </form>
-
-
-
-    </div>
-</body>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Library</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div id="title">Library</div>
+        </div>
+        <div class="content">
+            <button id="addButton">Add book</button>
+            <form method="post"id="addBookForm">
+                <div>
+                    <label for="bookTitle">Title</label>
+                    <input type="text" id="bookTitle" name="title" placeholder="Book title" required>
+                </div>
+                <div>
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" placeholder="famous writerperson">
+                </div>
+                <div>
+                    <div>Have you read it?</div>
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="yes">
+                    <label for="no">No</label>
+                    <input type="radio" name="no">
+                </div>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
 </html>
