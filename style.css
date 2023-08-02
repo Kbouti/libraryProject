@@ -1,0 +1,17 @@
+:root{
+    --blue: #003049;
+    --red: #d62828;
+    --orange: #f77f00;
+    --yellow:#FCBE49;
+    --tan:#eae2b7;
+}
+
+
+
+body {
+    background-color:var(--blue);
+}
+
+.header{
+    color: var(--red);
+}
