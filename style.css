@@ -10,8 +10,18 @@
 
 body {
     background-color:var(--blue);
+    margin:0px;
 }
 
 .header{
     color: var(--red);
+    background-color:var(--tan);
+    height:20vh;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+#title{
+    font-size:36px;
 }
