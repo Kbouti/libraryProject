@@ -48,3 +48,17 @@ form{
     margin:auto;
     display:block;
 }
+
+#books > table{
+    background-color: var(--yellow);
+    margin:auto;
+    border-radius:20px;
+    padding:20px;
+}
+
+th, td{
+    width:auto;
+    padding:8px;
+    text-align:center;
+}
+
