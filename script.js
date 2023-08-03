@@ -18,7 +18,7 @@ function Book (title, author, pages, read){
     this.read = read;
 }
 
-function addBook(book){
+function addBook(){
     let title = document.querySelector('#title').value;
     console.log(`the title of this book is ${title}`);
     let author = document.querySelector('#author').value;
