@@ -36,6 +36,8 @@ form{
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    border-radius: 20px;
+    margin:auto;
 }
 
 #books{
