@@ -27,11 +27,12 @@ function addBook(book){
     let yesChecked = document.getElementById('yesRadio');
     if (yesChecked.checked) {
         console.log(`you read the book`);
+        read = "yes";
     } else {
         console.log(`you didn't read the book`);
+        read = "no" ;
     }
 
-    let read = document.querySelector('#read').value;
 
     let newBook = new Book(title, author, pages, read);
     console.log(newBook.title);
