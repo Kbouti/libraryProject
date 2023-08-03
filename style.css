@@ -9,7 +9,7 @@
 
 
 body {
-    background-color:var(--blue);
+    background-color:var(--tan);
     margin:0px;
 }
 
@@ -27,7 +27,15 @@ body {
 }
 
 form{
-    color:var(--yellow)
+    color:var(--yellow);
+    background-color:var(--blue);
+
+    width:40vw;
+    display:flex;
+    padding:20px;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
 #books{

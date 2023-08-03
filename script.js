@@ -6,7 +6,7 @@ const addBookForm = document.getElementById("addBook");
 
 
 newBookButton.addEventListener("click", function(){
-    addBookForm.style.display = "block";
+    addBookForm.style.display = "flex";
     newBookButton.style.display = "none";
 });
 
