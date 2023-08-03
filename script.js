@@ -35,6 +35,7 @@ function addBook(book){
 
 
     let newBook = new Book(title, author, pages, read);
+    console.log(newBook);
     console.log(newBook.title);
 
 }
