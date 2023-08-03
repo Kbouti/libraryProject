@@ -43,3 +43,7 @@ form{
 #books{
     background-color: var(--tan);
 }
+
+#newBook{
+    margin:auto;
+}
