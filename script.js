@@ -55,6 +55,12 @@ addBookForm.addEventListener("submit", function(){
     addBook();
 })
 
+function capitalize(string){
+    let newString = string.charAt(0).toUpperCase() + string.slice(1);
+    return newString;
+}
+
+
 function createTable(array){
     const table = document.createElement("table");
 
@@ -64,10 +70,16 @@ const tbody = document.createElement("tbody");
 const headerRow = document.createElement("tr");
 for (const key in array[0]) {
   const th = document.createElement("th");
-  th.textContent = key;
+let tempString = key;
+let capString = capitalize(tempString);
+  th.textContent = capString;
+  console.log(key)
   headerRow.appendChild(th);
-
 }
+
+
+
+
 thead.appendChild(headerRow);
 array.forEach((item) => {
     const dataRow = document.createElement("tr");
