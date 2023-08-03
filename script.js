@@ -37,7 +37,10 @@ function addBook(){
     let newBook = new Book(title, author, pages, read);
     console.log(newBook);
     console.log(newBook.title);
+    myLibrary.push(newBook);
+    console.log(myLibrary);
 
+    addBookForm.reset();
 }
 
 console.log(`hey man`)
@@ -48,8 +51,6 @@ addBookForm.addEventListener("submit", function(){
     event.preventDefault();
     addBook();
 })
-
-
 
 
 //   https://www.youtube.com/watch?v=9YGgC1WPpf4&t=880s
