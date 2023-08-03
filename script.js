@@ -11,7 +11,7 @@ newBookButton.addEventListener("click", function(){
 });
 
 
-function Book (title, author, read){
+function Book (title, author, pages, read){
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -19,18 +19,38 @@ function Book (title, author, read){
 }
 
 function addBook(book){
-    let title = document.getElementById("title").value;
+    let title = document.querySelector('#title').value;
+    console.log(`the title of this book is ${title}`);
+    let author = document.querySelector('#author').value;
+    let pages = document.querySelector('#pages').value;
+
+    let yesChecked = document.getElementById('yesRadio');
+    if (yesChecked.checked) {
+        console.log(`you read the book`);
+    } else {
+        console.log(`you didn't read the book`);
+    }
+
+    let read = document.querySelector('#read').value;
+
+    let newBook = new Book(title, author, pages, read);
+    console.log(newBook.title);
+
 }
 
-
+console.log(`hey man`)
 
 addBookForm.addEventListener("submit", function(){
     addBookForm.style.display = "none";
     newBookButton.style.display = "block";
     event.preventDefault();
+    addBook();
 })
 
 
+
+
+//   https://www.youtube.com/watch?v=9YGgC1WPpf4&t=880s
 
 
 
