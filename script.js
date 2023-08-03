@@ -74,7 +74,9 @@ array.forEach((item) => {
   table.appendChild(thead);
   table.appendChild(tbody);
 
+  booksDiv.innerHTML = "";
   booksDiv.appendChild(table);
+
 }
 
 //   https://www.youtube.com/watch?v=9YGgC1WPpf4&t=880s
