@@ -3,12 +3,20 @@ let myLibrary = [];
 const booksDiv = document.getElementById("books");
 const newBookButton = document.getElementById("newBook");
 const addBookForm = document.getElementById("addBook");
+const cancelButton = document.getElementById("cancel");
 
 
 newBookButton.addEventListener("click", function(){
     addBookForm.style.display = "flex";
     newBookButton.style.display = "none";
 });
+
+cancelButton.addEventListener("click", function(){
+    addBookForm.reset();
+    addBookForm.style.display = "none";
+    newBookButton.style.display = "block";
+
+})
 
 
 function Book (title, author, pages, read){
