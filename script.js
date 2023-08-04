@@ -4,6 +4,7 @@ const booksDiv = document.getElementById("books");
 const newBookButton = document.getElementById("newBook");
 const addBookForm = document.getElementById("addBook");
 const cancelButton = document.getElementById("cancel");
+const libraryTable = document.getElementById("library");
 
 
 newBookButton.addEventListener("click", function(){
