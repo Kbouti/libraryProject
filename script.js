@@ -28,16 +28,13 @@ function Book (title, author, pages, read){
 
 function addBook(){
     let title = document.querySelector('#title').value;
-    console.log(`the title of this book is ${title}`);
     let author = document.querySelector('#author').value;
     let pages = document.querySelector('#pages').value;
 
     let yesChecked = document.getElementById('yesRadio');
     if (yesChecked.checked) {
-        console.log(`you read the book`);
         read = "yes";
     } else {
-        console.log(`you didn't read the book`);
         read = "no" ;
     }
     let newBook = new Book(title, author, pages, read);
@@ -73,7 +70,6 @@ for (const key in array[0]) {
 let tempString = key;
 let capString = capitalize(tempString);
   th.textContent = capString;
-  console.log(key)
   headerRow.appendChild(th);
 }
 
