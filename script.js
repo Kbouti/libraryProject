@@ -15,9 +15,7 @@ cancelButton.addEventListener("click", function(){
     addBookForm.reset();
     addBookForm.style.display = "none";
     newBookButton.style.display = "block";
-
 })
-
 
 function Book (title, author, pages, read){
     this.title = title;
@@ -30,7 +28,6 @@ function addBook(){
     let title = document.querySelector('#title').value;
     let author = document.querySelector('#author').value;
     let pages = document.querySelector('#pages').value;
-
     let yesChecked = document.getElementById('yesRadio');
     if (yesChecked.checked) {
         read = "yes";
@@ -40,8 +37,6 @@ function addBook(){
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
     addBookForm.reset();
-
-
     createTable(myLibrary);
 }
 
@@ -72,11 +67,9 @@ let capString = capitalize(tempString);
   th.textContent = capString;
   headerRow.appendChild(th);
 }
-
-
-
-
 thead.appendChild(headerRow);
+
+
 array.forEach((item) => {
     const dataRow = document.createElement("tr");
     for (const key in item) {
