@@ -78,8 +78,23 @@ function publishToLibrary(book){
 
     const cell4 = document.createElement(`td`);
 
+    const readCheckBox = document.createElement(`input`)
+    readCheckBox.setAttribute('type', 'checkbox');
+    readCheckBox.setAttribute('name', 'status');
+
+    console.log(status)
+
+    if (status == `yes`){
+        readCheckBox.checked = true;
+    }
+    else if (status == `no`){
+        readCheckBox.checked = false;
+    }
 
     cell4.textContent = status
+    
+    cell4.appendChild(readCheckBox);
+    
     newRow.appendChild(cell4);
 
 
