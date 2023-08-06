@@ -1,5 +1,4 @@
 let myLibrary = [];
-
 const booksDiv = document.getElementById("books");
 const newBookButton = document.getElementById("newBook");
 const addBookForm = document.getElementById("addBook");
@@ -39,9 +38,6 @@ function getBook(){
     myLibrary.push(newBook);
     addBookForm.reset();
     // createTable(myLibrary);
-
-
-
 
 
     publishRow(newBook);
@@ -102,6 +98,7 @@ function publishRow(book){
 
 
     rmButton.addEventListener('click', function(){
+        rmButton.closest('tr').remove();
     })
 
     libraryTable.appendChild(newRow);
