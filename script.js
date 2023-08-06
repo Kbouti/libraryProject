@@ -64,10 +64,29 @@ function publishToLibrary(book){
     const status = book.read;
 
     const newRow = document.createElement(`tr`);
+
     const cell1 = document.createElement(`td`);
     cell1.textContent = title
+    newRow.appendChild(cell1);
 
-newRow.appendChild(cell1);
+    const cell2 = document.createElement(`td`);
+    cell2.textContent = author
+    newRow.appendChild(cell2);
+
+    const cell3 = document.createElement(`td`);
+    cell3.textContent = pages
+    newRow.appendChild(cell3);
+
+    const cell4 = document.createElement(`td`);
+
+    
+    cell4.textContent = status
+    newRow.appendChild(cell4);
+
+
+
+
+
 libraryTable.appendChild(newRow);
 
 } 
