@@ -39,6 +39,7 @@ function addBook(){
     myLibrary.push(newBook);
     addBookForm.reset();
     // createTable(myLibrary);
+    publishToLibrary(newBook);
 }
 
 addBookForm.addEventListener("submit", function(){
@@ -52,6 +53,32 @@ function capitalize(string){
     let newString = string.charAt(0).toUpperCase() + string.slice(1);
     return newString;
 }
+
+function publishToLibrary(book){
+
+
+    const title = book.title;
+    console.log(title)
+    const author = book.author;
+    const pages = book.pages;
+    const status = book.read;
+
+    const newRow = document.createElement(`tr`);
+    const cell1 = document.createElement(`td`);
+    cell1.textContent = title
+
+newRow.appendChild(cell1);
+libraryTable.appendChild(newRow);
+
+} 
+
+
+let book1 = new Book(`The Tuner`, `Korg`, `460`, `yes`);
+
+
+// myLibrary.push(book1);
+publishToLibrary(book1);
+
 
 
 
