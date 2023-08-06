@@ -91,66 +91,14 @@ function publishToLibrary(book){
         readCheckBox.checked = false;
     }
 
-    cell4.textContent = status
-    
     cell4.appendChild(readCheckBox);
-    
     newRow.appendChild(cell4);
-
-
-
-
-
-libraryTable.appendChild(newRow);
-
+    libraryTable.appendChild(newRow);
 } 
 
 
-let book1 = new Book(`The Tuner`, `Korg`, `460`, `yes`);
+//let book1 = new Book(`The Tuner`, `Korg`, `460`, `yes`);
 
 
-// myLibrary.push(book1);
-publishToLibrary(book1);
-
-
-
-
-// The following code made with help of chatgpt makes a table, but I couldn't figure out how to get buttons in it.
-
-// function createTable(array){
-//     const table = document.createElement("table");
-
-// const thead = document.createElement("thead");
-// const tbody = document.createElement("tbody");
-
-// const headerRow = document.createElement("tr");
-// for (const key in array[0]) {
-//   const th = document.createElement("th");
-// let tempString = key;
-// let capString = capitalize(tempString);
-//   th.textContent = capString;
-//   headerRow.appendChild(th);
-// }
-// thead.appendChild(headerRow);
-// array.forEach((item) => {
-//     const dataRow = document.createElement("tr");
-//     for (const key in item) {
-//       const td = document.createElement("td");
-//       td.textContent = item[key];
-//       dataRow.appendChild(td);
-//     }
-//     tbody.appendChild(dataRow);
-//   });
-
-//   table.appendChild(thead);
-//   table.appendChild(tbody);
-
-//   booksDiv.innerHTML = "";
-//   booksDiv.appendChild(table);
-
-// }
-
-//   https://www.youtube.com/watch?v=9YGgC1WPpf4&t=880s
-
-
+//publishToLibrary(book1);
 
