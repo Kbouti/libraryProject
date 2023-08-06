@@ -53,7 +53,7 @@ form{
     background-color: var(--yellow);
     margin:auto;
     margin-top:20px;
-    width:40vw;
+    width: 60vw;
     border-radius:20px;
     padding:20px;
 }

@@ -93,6 +93,17 @@ function publishToLibrary(book){
 
     cell4.appendChild(readCheckBox);
     newRow.appendChild(cell4);
+
+
+    const cell5 = document.createElement(`td`);
+    const rmButton = document.createElement(`button`);
+    rmButton.textContent = `Remove`;
+    cell5.appendChild(rmButton);
+    newRow.appendChild(cell5);
+    
+
+
+
     libraryTable.appendChild(newRow);
 } 
 
