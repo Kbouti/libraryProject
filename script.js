@@ -105,8 +105,8 @@ function publishRow(book){
 } 
 
 
-let book1 = new Book(`The Tuner`, `Korg`, `460`, `yes`);
+// let book1 = new Book(`The Tuner`, `Korg`, `460`, `yes`);
 
 
-publishRow(book1);
+// publishRow(book1);
 
