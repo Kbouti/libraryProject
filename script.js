@@ -25,7 +25,7 @@ function Book (title, author, pages, read){
     this.read = read;
 }
 
-function addBook(){
+function getBook(){
     let title = document.querySelector('#title').value;
     let author = document.querySelector('#author').value;
     let pages = document.querySelector('#pages').value;
@@ -39,17 +39,28 @@ function addBook(){
     myLibrary.push(newBook);
     addBookForm.reset();
     // createTable(myLibrary);
-    publishToLibrary(newBook);
+
+
+
+
+
+    publishRow(newBook);
+}
+
+
+
+function growLibrary(book){
+    myLibrary.push(book)
 }
 
 addBookForm.addEventListener("submit", function(){
     addBookForm.style.display = "none";
     newBookButton.style.display = "block";
     event.preventDefault();
-    addBook();
+    getBook();
 })
 
-function publishToLibrary(book){
+function publishRow(book){
     const title = book.title;
     const author = book.author;
     const pages = book.pages;
@@ -100,5 +111,5 @@ function publishToLibrary(book){
 let book1 = new Book(`The Tuner`, `Korg`, `460`, `yes`);
 
 
-publishToLibrary(book1);
+publishRow(book1);
 
