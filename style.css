@@ -40,6 +40,14 @@ form{
     margin:auto;
 }
 
+form > div {
+    margin-top: 8px;
+}
+
+label {
+    margin: 8px;
+}
+
 #books{
     background-color: var(--tan);
 }
