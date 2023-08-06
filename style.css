@@ -64,3 +64,6 @@ th, td{
     text-align:center;
 }
 
+button{
+    cursor: pointer;
+}

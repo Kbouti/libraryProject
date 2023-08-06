@@ -58,7 +58,6 @@ function publishToLibrary(book){
 
 
     const title = book.title;
-    console.log(title)
     const author = book.author;
     const pages = book.pages;
     const status = book.read;
@@ -79,7 +78,7 @@ function publishToLibrary(book){
 
     const cell4 = document.createElement(`td`);
 
-    
+
     cell4.textContent = status
     newRow.appendChild(cell4);
 
