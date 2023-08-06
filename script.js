@@ -49,14 +49,7 @@ addBookForm.addEventListener("submit", function(){
     addBook();
 })
 
-function capitalize(string){
-    let newString = string.charAt(0).toUpperCase() + string.slice(1);
-    return newString;
-}
-
 function publishToLibrary(book){
-
-
     const title = book.title;
     const author = book.author;
     const pages = book.pages;
@@ -77,20 +70,15 @@ function publishToLibrary(book){
     newRow.appendChild(cell3);
 
     const cell4 = document.createElement(`td`);
-
     const readCheckBox = document.createElement(`input`)
     readCheckBox.setAttribute('type', 'checkbox');
     readCheckBox.setAttribute('name', 'status');
-
-    console.log(status)
-
     if (status == `yes`){
         readCheckBox.checked = true;
     }
     else if (status == `no`){
         readCheckBox.checked = false;
     }
-
     cell4.appendChild(readCheckBox);
     newRow.appendChild(cell4);
 
@@ -100,16 +88,17 @@ function publishToLibrary(book){
     rmButton.textContent = `Remove`;
     cell5.appendChild(rmButton);
     newRow.appendChild(cell5);
-    
 
 
+    rmButton.addEventListener('click', function(){
+    })
 
     libraryTable.appendChild(newRow);
 } 
 
 
-//let book1 = new Book(`The Tuner`, `Korg`, `460`, `yes`);
+let book1 = new Book(`The Tuner`, `Korg`, `460`, `yes`);
 
 
-//publishToLibrary(book1);
+publishToLibrary(book1);
 
