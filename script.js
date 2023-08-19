@@ -17,12 +17,30 @@ cancelButton.addEventListener("click", function(){
     newBookButton.style.display = "block";
 })
 
-function Book (title, author, pages, read){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+// function Book (title, author, pages, read){
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+// }
+
+
+
+
+class Book {
+    constructor(title, author, pages, read){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
+
+
+
+
+
+
 
 function getBook(){
     let title = document.querySelector('#title').value;
