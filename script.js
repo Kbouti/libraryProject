@@ -102,3 +102,17 @@ function publishRow(book) {
 // let book1 = new Book(`The Tuner`, `Korg`, `460`, `yes`);
 
 // publishRow(book1);
+
+
+
+const title = document.getElementById(`title`);
+const titleError = document.getElementById(`titleError`);
+
+const author = document.getElementById(`author`);
+const pages = document.getElementById(`pages`);
+
+title.addEventListener(`input`, (event) => {
+  if (title.validity.tooShort){
+    titleError.textContent = `It's gotta have more than two characters`
+  }
+})
