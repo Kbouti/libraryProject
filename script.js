@@ -103,18 +103,39 @@ function publishRow(book) {
 
 // publishRow(book1);
 
-
+// ******************************************************************************************
+// Form validation assigment code below:
 
 const title = document.getElementById(`title`);
 const titleError = document.getElementById(`titleError`);
 
 const author = document.getElementById(`author`);
+
 const pages = document.getElementById(`pages`);
+const pagesError = document.getElementById(`pagesError`);
 
 title.addEventListener(`input`, (event) => {
-  if (title.validity.tooShort){
-    titleError.textContent = `It's gotta have more than two characters`
+  console.log(title.value);
+  // This works, unlike the pages input for some reason
+
+  if (title.validity.tooShort) {
+    titleError.textContent = `It's gotta have more than two characters`;
   } else {
     titleError.textContent = ``;
   }
-})
+});
+
+pages.addEventListener(`input`, (event) => {
+  let pagesValue = pages.value;
+
+  console.log(pagesValue);
+  // This does not work. Logs an empty string. What is different between this and the title input field?
+
+  if (pages.validity.typeMismatch) {
+    console.log(`type mismatch error on pages input`);
+    pagesError.textContent = `Must input a number`;
+  } else {
+    pagesError.textContent = ``;
+    console.log(`no pages error detected`);
+  }
+});
