@@ -128,6 +128,12 @@ title.addEventListener(`input`, (event) => {
 pages.addEventListener(`input`, (event) => {
   let pagesValue = pages.value;
 
+// ******************************************************************************************************************************
+// I think the problem is the object type of pagesValue at this point. We need to first verify it's type before checking it's validity
+
+
+
+
   console.log(pagesValue);
   // This does not work. Logs an empty string. What is different between this and the title input field?
 
