@@ -82,6 +82,8 @@ input:invalid {
 }
 
 .error{
-    background:white;
-    color:black;
+    border-color: #900;
+  background-color: #fdd;
+  color: black;
+  /* padding: 3px; */
 }
