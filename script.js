@@ -114,5 +114,7 @@ const pages = document.getElementById(`pages`);
 title.addEventListener(`input`, (event) => {
   if (title.validity.tooShort){
     titleError.textContent = `It's gotta have more than two characters`
+  } else {
+    titleError.textContent = ``;
   }
 })
