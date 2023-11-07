@@ -47,7 +47,7 @@ function growLibrary(book) {
   myLibrary.push(book);
 }
 
-addBookForm.addEventListener("submit", function () {
+addBookForm.addEventListener("submit", function (event) {
   addBookForm.style.display = "none";
   newBookButton.style.display = "block";
   event.preventDefault();
@@ -114,16 +114,19 @@ const author = document.getElementById(`author`);
 const pages = document.getElementById(`pages`);
 const pagesError = document.getElementById(`pagesError`);
 
-title.addEventListener(`input`, (event) => {
+title.addEventListener(`input`, function() {
   console.log(title.value);
   if (title.validity.tooShort) {
     titleError.textContent = `It's gotta have more than two characters`;
   } else {
     titleError.textContent = ``;
   }
+
+
+
 });
 
-pages.addEventListener(`input`, (event) => {
+pages.addEventListener(`input`, function() {
   console.log(
     `something has been entered into the pages input. Let's see what it is:`
   );
@@ -136,28 +139,28 @@ pages.addEventListener(`input`, (event) => {
   // I think the problem is the object type of pagesValue at this point. We need to first verify it's type before checking it's validity
   // but isn't that the friggen point of the validity check??
 
-  console.log(Number(pagesValue));
+  // console.log(Number(pagesValue));
 
-  pagesValue = Number(pagesValue);
+  // pagesValue = Number(pagesValue);
 
-  // console.log(typeof Number(pagesValue))
+  // // console.log(typeof Number(pagesValue))
 
-  if (typeof pagesValue == `string`) {
-    console.log(`found string`);
-    pagesError.textContent = `Must input a number`;
-  } else {
-    pagesError.textContent = ``;
-    console.log(`no pages error detected`);
-  }
-
-  // This does not work. Logs an empty string. What is different between this and the title input field?
-  // if (pages.validity.typeMismatch) {
-  //   console.log(`type mismatch error on pages input`);
+  // if (typeof pagesValue == `string`) {
+  //   console.log(`found string`);
   //   pagesError.textContent = `Must input a number`;
   // } else {
   //   pagesError.textContent = ``;
   //   console.log(`no pages error detected`);
   // }
+
+  // This does not work. Logs an empty string. What is different between this and the title input field?
+  if (pages.validity.typeMismatch) {
+    console.log(`type mismatch error on pages input`);
+    pagesError.textContent = `Must input a number`;
+  } else {
+    pagesError.textContent = ``;
+    console.log(`no pages error detected`);
+  }
 });
 
 
