@@ -50,10 +50,22 @@ function growLibrary(book) {
 }
 
 addBookForm.addEventListener("submit", function (event) {
-  addBookForm.style.display = "none";
-  newBookButton.style.display = "block";
   event.preventDefault();
-  getBook();
+
+  if (errorFound == true) {
+    alert(`Please fix errors and submit again`);
+    return;
+  } else {
+    if (title.value === ``) {
+      alert(`Your book must have a title`);
+      return;
+    }
+
+    addBookForm.style.display = "none";
+    newBookButton.style.display = "block";
+    event.preventDefault();
+    getBook();
+  }
 });
 
 function publishRow(book) {
@@ -116,7 +128,7 @@ const author = document.getElementById(`author`);
 const pages = document.getElementById(`pages`);
 const pagesError = document.getElementById(`pagesError`);
 
-title.addEventListener(`input`, function() {
+title.addEventListener(`input`, function () {
   console.log(title.value);
   if (title.validity.tooShort) {
     titleError.textContent = `It's gotta have more than two characters`;
@@ -125,19 +137,16 @@ title.addEventListener(`input`, function() {
     titleError.textContent = ``;
     errorFound = false;
   }
-
-
-
 });
 
-pages.addEventListener(`input`, function() {
+pages.addEventListener(`input`, function () {
   console.log(
     `something has been entered into the pages input. Let's see what it is:`
   );
   let pagesValue = pages.value;
   console.log(pagesValue);
 
-  if (pagesValue == ``){
+  if (pagesValue == ``) {
     console.log(`not a friggin number my guy`);
     pagesError.textContent = `Must be a number`;
     errorFound = true;
@@ -146,7 +155,3 @@ pages.addEventListener(`input`, function() {
     errorFound = false;
   }
 });
-
-
-
-
