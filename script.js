@@ -5,6 +5,8 @@ const addBookForm = document.getElementById("addBook");
 const cancelButton = document.getElementById("cancel");
 const libraryTable = document.getElementById("library");
 
+let errorFound = false;
+
 newBookButton.addEventListener("click", function () {
   addBookForm.style.display = "flex";
   newBookButton.style.display = "none";
@@ -118,8 +120,10 @@ title.addEventListener(`input`, function() {
   console.log(title.value);
   if (title.validity.tooShort) {
     titleError.textContent = `It's gotta have more than two characters`;
+    errorFound = true;
   } else {
     titleError.textContent = ``;
+    errorFound = false;
   }
 
 
@@ -130,36 +134,16 @@ pages.addEventListener(`input`, function() {
   console.log(
     `something has been entered into the pages input. Let's see what it is:`
   );
-  let pagesValue = pages.valueAsNumber;
+  let pagesValue = pages.value;
   console.log(pagesValue);
 
-  // .value returns a string. .valueAsNumber will return a number
-
-  // ******************************************************************************************************************************
-  // I think the problem is the object type of pagesValue at this point. We need to first verify it's type before checking it's validity
-  // but isn't that the friggen point of the validity check??
-
-  // console.log(Number(pagesValue));
-
-  // pagesValue = Number(pagesValue);
-
-  // // console.log(typeof Number(pagesValue))
-
-  // if (typeof pagesValue == `string`) {
-  //   console.log(`found string`);
-  //   pagesError.textContent = `Must input a number`;
-  // } else {
-  //   pagesError.textContent = ``;
-  //   console.log(`no pages error detected`);
-  // }
-
-  // This does not work. Logs an empty string. What is different between this and the title input field?
-  if (pages.validity.typeMismatch) {
-    console.log(`type mismatch error on pages input`);
-    pagesError.textContent = `Must input a number`;
+  if (pagesValue == ``){
+    console.log(`not a friggin number my guy`);
+    pagesError.textContent = `Must be a number`;
+    errorFound = true;
   } else {
     pagesError.textContent = ``;
-    console.log(`no pages error detected`);
+    errorFound = false;
   }
 });
 
